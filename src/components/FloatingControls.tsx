@@ -45,12 +45,25 @@ export default function FloatingControls() {
         {/* WhatsApp Float Trigger */}
         <button
           onClick={handleWhatsApp}
-          className="group relative w-12 h-12 rounded-none bg-[#25D366] text-black hover:text-white flex items-center justify-center border border-black/10 transition-colors duration-200 cursor-pointer"
+          className="group relative w-12 h-12 rounded-xl bg-transparent text-white flex items-center justify-center transition-all duration-300 cursor-pointer hover:scale-110 active:scale-95 focus:outline-none focus:ring-4 focus:ring-[#00A884]/40"
           aria-label="Direct WhatsApp Enquiry"
         >
-          <LucideIcon name="MessageSquare" size={20} />
+          {/* Continuous Red Light ambient heartbeat pulse */}
+          <div className="absolute inset-0 rounded-full bg-red-600/40 blur-md animate-pulse pointer-events-none z-0" />
+          
+          {/* Continuous Red expanding attention-grabber ring */}
+          <div className="absolute -inset-2.5 rounded-full border-2 border-red-500/60 animate-ping pointer-events-none z-0" style={{ animationDuration: "1.8s" }} />
+
+          <LucideIcon name="WhatsApp" size={48} className="relative z-10 drop-shadow-[0_4px_12px_rgba(0,168,132,0.4)] group-hover:drop-shadow-[0_6px_20px_rgba(0,168,132,0.7)] transition-all duration-300" />
+          
+          {/* Live Alert flashing red indicator dot */}
+          <span className="absolute -top-1 -right-1 flex h-4 w-4 z-20">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-4 w-4 bg-red-600 border-2 border-black shadow-lg shadow-red-500/50"></span>
+          </span>
+
           {/* Tooltip */}
-          <span className="absolute right-14 bg-black border border-white/10 px-3 py-1.5 rounded-none font-sans text-[11px] font-black uppercase text-[#25D366] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none select-none">
+          <span className="absolute right-14 bg-black border border-white/10 px-3 py-1.5 rounded-none font-sans text-[11px] font-black uppercase text-[#00A884] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none select-none z-30">
             WhatsApp Chat
           </span>
         </button>

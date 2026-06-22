@@ -137,9 +137,9 @@ Please contact me.`;
                   href="https://wa.me/919930206551"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-5 py-3 rounded-none bg-[#25D366]/10 hover:bg-[#25D366] hover:text-black border border-[#25D366]/20 hover:border-[#25D366] text-[#25D366] font-sans font-black text-xs uppercase tracking-widest transition-colors duration-300"
+                  className="flex items-center gap-2 px-5 py-3 rounded-none bg-[#00A884]/10 hover:bg-[#00A884] hover:text-white border border-[#00A884]/20 hover:border-[#00A884] text-[#00A884] font-sans font-black text-xs uppercase tracking-widest transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#00A884] focus:ring-offset-2 focus:ring-offset-black hover:shadow-[0_0_15px_rgba(0,168,132,0.3)]"
                 >
-                  <LucideIcon name="MessageSquare" size={12} />
+                  <LucideIcon name="WhatsApp" size={14} className="rounded-sm" />
                   Direct WhatsApp
                 </a>
               </div>
@@ -296,16 +296,16 @@ Please contact me.`;
               <div className="pt-4">
                 <button
                   type="submit"
-                  className="w-full py-4 bg-[#25D366] text-black font-sans font-black text-xs uppercase tracking-widest rounded-none transition-colors duration-300 cursor-pointer flex items-center justify-center gap-2 text-[12px]"
+                  className="w-full py-4 bg-[#00A884] hover:bg-[#008f6f] text-white font-sans font-black text-xs uppercase tracking-widest rounded-none transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 text-[12px] hover:shadow-[0_0_20px_rgba(0,168,132,0.5)] focus:outline-none focus:ring-2 focus:ring-[#00A884] focus:ring-offset-2 focus:ring-offset-black"
                 >
-                  <LucideIcon name="MessageSquare" size={16} />
+                  <LucideIcon name="WhatsApp" size={18} className="rounded-sm" />
                   SEND ENQUIRY ON WHATSAPP
                 </button>
               </div>
 
               {/* Feedback Success panel */}
               {formSubmitted && (
-                <p className="text-center font-sans text-xs text-[#25D366] animate-pulse">
+                <p className="text-center font-sans text-xs text-[#00A884] animate-pulse font-bold mt-2">
                   ✓ Form processed! Your WhatsApp redirect should be open. Check your messaging tab!
                 </p>
               )}

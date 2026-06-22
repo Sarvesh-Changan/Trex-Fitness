@@ -17,7 +17,7 @@ export default function Footer() {
 
   const socialLinks = [
     { name: "Instagram", href: "https://instagram.com", icon: "ExternalLink" as const },
-    { name: "WhatsApp", href: "https://wa.me/919930206551", icon: "MessageSquare" as const },
+    { name: "WhatsApp", href: "https://wa.me/919930206551", icon: "WhatsApp" as const },
     { name: "Google", href: "https://maps.google.com", icon: "MapPin" as const },
   ];
 
