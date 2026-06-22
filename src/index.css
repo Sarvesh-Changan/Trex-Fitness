@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  --color-brand-primary: #FF4D00;
+  --color-brand-secondary: #FFB000;
+  --color-brand-highlight: #00E5FF;
+  --color-charcoal-dark: #0B0B0E;
+  --color-charcoal-light: #16161C;
+  --color-glass-card: rgba(15, 15, 20, 0.7);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #050507;
+    color: #ffffff;
+    font-family: var(--font-sans);
+  }
+  
+  /* Custom modern scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B0B0E;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #FF4D00;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FFB000;
+  }
+}
+
+@layer utilities {
+  .text-glow-orange {
+    text-shadow: 0 0 15px rgba(255, 77, 0, 0.6);
+  }
+  .text-glow-cyan {
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+  }
+  .glow-border {
+    position: relative;
+  }
+  .glow-border::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(to bottom right, rgba(255, 77, 0, 0.3), rgba(0, 229, 255, 0.2));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  .glow-border-primary::after {
+    background: linear-gradient(to bottom right, rgba(255, 77, 0, 0.6), rgba(255, 176, 0, 0.4));
+  }
+  
+  .glass-backdrop {
+    background-color: rgba(11, 11, 14, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 10s ease-middle-out infinite;
+}

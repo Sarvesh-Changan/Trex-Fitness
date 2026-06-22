@@ -1,0 +1,6 @@
+{
+  "name": "T-Rex Fitness Factory Kalwa",
+  "description": "Premium fitness gym in Kalwa, Thane, featuring certified trainers, state-of-the-art equipment, cardio, weight training, spa services, and functional training.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
